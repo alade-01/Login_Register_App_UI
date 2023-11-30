@@ -65,7 +65,7 @@ class ThemeCubit extends Cubit<ThemeData> {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: const Color(0xFFF1F4FF),
+      fillColor: const Color(0xFFF7F8F9),
       //constraints: const BoxConstraints(maxHeight: 65),
 
       // labelStyle: TextStyle(
@@ -74,9 +74,9 @@ class ThemeCubit extends Cubit<ThemeData> {
       //   fontSize: 16,
       // ),
 
-      iconColor: secondaryColor,
-      prefixIconColor: secondaryColor,
-      suffixIconColor: secondaryColor,
+      iconColor: Color(0xFF8391A1),
+      prefixIconColor: Color(0xFF8391A1),
+      suffixIconColor: Color(0xFF8391A1),
       contentPadding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
@@ -91,9 +91,9 @@ class ThemeCubit extends Cubit<ThemeData> {
       // focusColor: secondaryColor,
 
       hintStyle: TextStyle(
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: FontWeight.w500,
-        color: secondaryColor,
+        color: Color(0xFF8391A1),
       ),
       errorStyle: const TextStyle(
           fontSize: 12, fontFamily: PRIMARY_FONT, color: Colors.redAccent),

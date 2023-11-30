@@ -18,14 +18,15 @@ class SocalIcon extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(left: 10),
         padding:
-            const EdgeInsets.only(top: 15, bottom: 15, left: 20, right: 20),
-        decoration: const BoxDecoration(
-            color: Color(0xFFECECEC),
+            const EdgeInsets.only(top: 20, bottom: 20, left: 45, right: 45),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(width: 1,color: Color(0xFFE8ECF4)),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: SvgPicture.asset(
           iconSrc!,
-          height: 20,
-          width: 20,
+          height: 24,
+          width: 12,
         ),
       ),
     );
