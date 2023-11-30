@@ -135,9 +135,10 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
               AppButton(
                 callback: () {
-                  if (formKey.currentState!.validate()) {
-                    Navigator.pushNamed(context, RouterGenerator.otpRoute);
-                  }
+                  Navigator.pushNamed(context, RouterGenerator.passwordChangedRoute);
+                  // if (formKey.currentState!.validate()) {
+                  //   Navigator.pushNamed(context, RouterGenerator.passwordChangedRoute);
+                  // }
                 },
                 label: "Reset Password",
                 buttonType: ButtonType.PRIMARY,

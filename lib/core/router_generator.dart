@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_register_app_ui_kit/windows/login_screen.dart';
 import 'package:login_register_app_ui_kit/windows/new_password_screen.dart';
 import 'package:login_register_app_ui_kit/windows/otp_screen.dart';
+import 'package:login_register_app_ui_kit/windows/password_changed_screen.dart';
 import 'package:login_register_app_ui_kit/windows/register_screen.dart';
 
 import '../windows/forgot_password_screen.dart';
@@ -16,6 +17,7 @@ class RouterGenerator {
   static const forgotPasswordRoute = "/forgot-password";
   static const otpRoute = "/otp";
   static const newPasswordRoute = "/new-password";
+  static const passwordChangedRoute = "/password-changed";
 
   // static const indexRoute = "/index";
 
@@ -49,6 +51,10 @@ class RouterGenerator {
         case RouterGenerator.newPasswordRoute:
         return MaterialPageRoute(
           builder: (_) => const NewPasswordScreen(),
+        );
+        case RouterGenerator.passwordChangedRoute:
+        return MaterialPageRoute(
+          builder: (_) => const PasswordChangedScreen(),
         );
       default:
         return MaterialPageRoute(
