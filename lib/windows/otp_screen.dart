@@ -1,27 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login_register_app_ui_kit/components/shared/background.dart';
 
-import '../../components/shared/app_button.dart';
-import '../../core/utilis.dart';
-import '../../core/constants.dart';
-import '../core/router_generator.dart';
+import '../components/otp_form_field.dart';
+import '../components/shared/app_button.dart';
+import '../components/shared/background.dart';
+import '../core/constants.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+class OtpsScreen extends StatefulWidget {
+  const OtpsScreen({super.key});
 
   @override
-  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
+  State<OtpsScreen> createState() => _OtpsScreenState();
 }
 
-class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  final TextEditingController emailControler = TextEditingController();
-
+class _OtpsScreenState extends State<OtpsScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Background(
+    return  Background(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
           child: Column(
@@ -32,9 +28,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               Text(
                 "Forgot Password?",
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: secondaryColor,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,),
+                  color: secondaryColor,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,),
               ),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
               Text(
@@ -45,41 +41,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
-              Form(
-                key: formKey,
-                child: Column(
-                  children: [
-                    Container(
-                      child: TextFormField(
-                        controller: emailControler,
-                        validator: (String? value) {
-                          if (value != null && value.isEmpty) {
-                            return "This field is required";
-                          }
-                          if (value != null &&
-                              value.isNotEmpty &&
-                              !StringUtil.isValidEmail(value)) {
-                            return "The email is invalid";
-                          }
-                          return null;
-                        },
-                        style: textStyleInput,
-                        decoration: const InputDecoration(
-                          prefixIcon: Icon(CupertinoIcons.at),
-                          hintText: "Enter your email",
-                        ),
-                        keyboardType: TextInputType.text,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              OtpFormField(length: 50,),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
               AppButton(
                 callback: () {
-                  if (formKey.currentState!.validate()) {
-                        Navigator.pushNamed(context, RouterGenerator.otpRoute);
-                  }
+                 // if (formKey.currentState!.validate()) {}
                 },
                 label: "Send Code",
                 buttonType: ButtonType.PRIMARY,
@@ -88,7 +54,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
               RichText(
                 text: TextSpan(
-                  text: 'Remember Password?',
+                  text: 'Didn’t received code?',
                   style:  Theme.of(context)
                       .textTheme
                       .labelMedium!
@@ -98,7 +64,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       fontWeight: FontWeight.w500),
                   children: <TextSpan>[
                     TextSpan(
-                        text: 'Login',
+                        text: 'Resend',
                         style:  Theme.of(context)
                             .textTheme
                             .labelMedium!
