@@ -54,7 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
               AppButton(
                 callback: () =>
-                    Navigator.pushNamed(context, RouterGenerator.loginRoute),
+                    Navigator.pushNamed(context, RouterGenerator.registerRoute),
                 label: "Register",
                 color: Color(0xFF1E232C),
                 solid: false,

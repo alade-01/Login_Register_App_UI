@@ -152,31 +152,28 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: BUTTON_SEPARATION_SPACE),
                   const SocialNetworkItem(),
                   const SizedBox(height: BUTTON_SEPARATION_SPACE),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: RichText(
-                      text: TextSpan(
-                        text: 'Don’t have an account? ',
-                        style:  Theme.of(context)
-                            .textTheme
-                            .labelMedium!
-                            .copyWith(
-                            fontSize: 15,
-                            color: Color(0xFF24282C),
-                            fontWeight: FontWeight.w500),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'Register Now',
-                              style:  Theme.of(context)
-                                  .textTheme
-                                  .labelMedium!
-                                  .copyWith(
-                                  fontSize: 15,
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w700)
-                          )
-                        ],
-                      ),
+                  RichText(
+                    text: TextSpan(
+                      text: 'Don’t have an account? ',
+                      style:  Theme.of(context)
+                          .textTheme
+                          .labelMedium!
+                          .copyWith(
+                          fontSize: 15,
+                          color: Color(0xFF24282C),
+                          fontWeight: FontWeight.w500),
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: 'Register Now',
+                            style:  Theme.of(context)
+                                .textTheme
+                                .labelMedium!
+                                .copyWith(
+                                fontSize: 15,
+                                color: primaryColor,
+                                fontWeight: FontWeight.w700)
+                        )
+                      ],
                     ),
                   )
                 ],
