@@ -5,6 +5,7 @@ import '../components/otp_form_field.dart';
 import '../components/shared/app_button.dart';
 import '../components/shared/background.dart';
 import '../core/constants.dart';
+import '../core/router_generator.dart';
 
 class OtpsScreen extends StatefulWidget {
   const OtpsScreen({super.key});
@@ -41,12 +42,10 @@ class _OtpsScreenState extends State<OtpsScreen> {
                     fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
-              OtpFormField(length: 50,),
+              OtpFormField(length: 35,),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
               AppButton(
-                callback: () {
-                 // if (formKey.currentState!.validate()) {}
-                },
+                callback: () => Navigator.pushNamed(context, RouterGenerator.newPasswordRoute),
                 label: "Send Code",
                 buttonType: ButtonType.PRIMARY,
                 width: size.width,
