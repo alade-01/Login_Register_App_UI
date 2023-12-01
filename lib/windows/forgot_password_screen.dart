@@ -22,92 +22,104 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
-        child: SingleChildScrollView(
+        child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
-              Text(
-                "Forgot Password?",
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: secondaryColor,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,),
-              ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
-              Text(
-                "Don't worry! It occurs. Please enter the email address linked with your account.",
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: Color(0xFF8391A1),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500),
-              ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
-              Form(
-                key: formKey,
-                child: Column(
-                  children: [
-                    Container(
-                      child: TextFormField(
-                        controller: emailControler,
-                        validator: (String? value) {
-                          if (value != null && value.isEmpty) {
-                            return "This field is required";
-                          }
-                          if (value != null &&
-                              value.isNotEmpty &&
-                              !StringUtil.isValidEmail(value)) {
-                            return "The email is invalid";
-                          }
-                          return null;
-                        },
-                        style: textStyleInput,
-                        decoration: const InputDecoration(
-                          prefixIcon: Icon(CupertinoIcons.at),
-                          hintText: "Enter your email",
-                        ),
-                        keyboardType: TextInputType.text,
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
+                      Text(
+                        "Forgot Password?",
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: secondaryColor,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w700,),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
+                      Text(
+                        "Don't worry! It occurs. Please enter the email address linked with your account.",
+                        style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Color(0xFF8391A1),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
+                      Form(
+                        key: formKey,
+                        child: Column(
+                          children: [
+                            Container(
+                              child: TextFormField(
+                                controller: emailControler,
+                                validator: (String? value) {
+                                  if (value != null && value.isEmpty) {
+                                    return "This field is required";
+                                  }
+                                  if (value != null &&
+                                      value.isNotEmpty &&
+                                      !StringUtil.isValidEmail(value)) {
+                                    return "The email is invalid";
+                                  }
+                                  return null;
+                                },
+                                style: textStyleInput,
+                                decoration: const InputDecoration(
+                                  prefixIcon: Icon(CupertinoIcons.at),
+                                  hintText: "Enter your email",
+                                ),
+                                keyboardType: TextInputType.text,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
+                      AppButton(
+                        callback: () {
+                          if (formKey.currentState!.validate()) {
+                                Navigator.pushNamed(context, RouterGenerator.otpRoute);
+                          }
+                        },
+                        label: "Send Code",
+                        buttonType: ButtonType.PRIMARY,
+                        width: size.width,
+                      ),
+                      const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
+                    ],
+                  ),
                 ),
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
-              AppButton(
-                callback: () {
-                  if (formKey.currentState!.validate()) {
-                        Navigator.pushNamed(context, RouterGenerator.otpRoute);
-                  }
-                },
-                label: "Send Code",
-                buttonType: ButtonType.PRIMARY,
-                width: size.width,
-              ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
-              RichText(
-                text: TextSpan(
-                  text: 'Remember Password?',
-                  style:  Theme.of(context)
-                      .textTheme
-                      .labelMedium!
-                      .copyWith(
-                      fontSize: 15,
-                      color: Color(0xFF24282C),
-                      fontWeight: FontWeight.w500),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: 'Login',
-                        style:  Theme.of(context)
-                            .textTheme
-                            .labelMedium!
-                            .copyWith(
-                            fontSize: 15,
-                            color: primaryColor,
-                            fontWeight: FontWeight.w700)
-                    )
-                  ],
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(context, RouterGenerator.loginRoute),
+                child:            RichText(
+                  text: TextSpan(
+                    text: 'Remember Password? ',
+                    style:  Theme.of(context)
+                        .textTheme
+                        .labelMedium!
+                        .copyWith(
+                        fontSize: 15,
+                        color: Color(0xFF24282C),
+                        fontWeight: FontWeight.w500),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: 'Login',
+                          style:  Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(
+                              fontSize: 15,
+                              color: primaryColor,
+                              fontWeight: FontWeight.w700)
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
