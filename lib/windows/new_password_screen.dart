@@ -39,6 +39,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
                       Text(
