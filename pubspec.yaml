@@ -1,7 +1,7 @@
 name: login_register_app_ui_kit
-description: "Mobile App Splash, Welcome, Sign In, Sign Up ,
-Forgot Password , Otp , New Password , and Password changed 
-successfully with Flutter framework."
+description:
+  "Mobile App Splash, Welcome, Sign In, Sign Up , Forgot Password , Otp , New Password , 
+and Password changed successfully with Flutter framework."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
