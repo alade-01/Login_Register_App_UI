@@ -39,7 +39,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
+                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
                   Text(
                     "Create new password",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(

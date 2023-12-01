@@ -1,16 +1,32 @@
-# login_register_app_ui_kit
+## login_register_app_ui_kit
 
-A new Flutter project.
+Responsive six screen design with input controls on each screen. 
+The purpose is to facilitate user authentication on applications for 
+different uses. All these screens work perfectly on Android, iOS
+Download the Flutter Fruzzdigital app template for free.
 
-## Getting Started
+## Screens it contains:
+
+=> Splash
+
+=> Welcome
+
+=> Sign In
+
+=> Sign Up
+
+=> Forgot Password
+
+=> Otp 
+
+=> New Password 
+
+=> Password changed successfully 
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### GoodJob App Final UI On Android
+![Preview](/flutter_auth_android_ui.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### GoodJob App Final UI On IOS
+![Preview](/flutter_auth_ios_ui.jpg)

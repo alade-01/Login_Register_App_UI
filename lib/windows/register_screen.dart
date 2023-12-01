@@ -41,7 +41,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
+                    const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
                     Text(
                       "Hello! Register to get started",
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(

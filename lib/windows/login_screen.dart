@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
+                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
                   Text(
                     "Welcome back! Glad to see you, Again!",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(

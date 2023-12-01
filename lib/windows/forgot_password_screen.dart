@@ -32,7 +32,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
+                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
                   Text(
                     "Forgot Password?",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
