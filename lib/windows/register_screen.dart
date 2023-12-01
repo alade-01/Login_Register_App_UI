@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:login_register_app_ui_kit/core/router_generator.dart';
 
 import '../../components/shared/app_button.dart';
-import '../../core/utilis.dart';
 import '../../core/constants.dart';
+import '../../core/utilis.dart';
 import '../components/item/social_network_item.dart';
 import '../components/shared/background.dart';
 import '../components/shared/or_divider.dart';
@@ -36,13 +36,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
+                    const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
                     Text(
                       "Hello! Register to get started",
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -56,7 +55,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: Column(
                         children: [
                           Container(
-                            margin: const EdgeInsets.only(top: 5, bottom: 17),
+                            margin: const EdgeInsets.only(bottom: 17),
                             child: TextFormField(
                               controller: _userController,
                               style: textStyleInput,
@@ -66,8 +65,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 }
                                 if (value != null &&
                                     value.isNotEmpty &&
-                                    !StringUtil.isValidEmail(value)) {
-                                  return "The Username is invalid";
+                                    value.length <= 4) {
+                                  return "5 digits minimum";
                                 }
                                 return null;
                               },
@@ -145,8 +144,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 if (value != null && value.isEmpty) {
                                   return "This field is required";
                                 }
-                                if (_passwordControllerConfirm !=
-                                    _passwordController) {
+                                if (value != _passwordController.text) {
                                   return "Different password";
                                 }
                                 return null;
@@ -182,18 +180,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(height: BUTTON_SEPARATION_SPACE * 1.8),
                     AppButton(
                       callback: () {
-                        if (formKey.currentState!.validate()) {}
+                        if (formKey.currentState!.validate()) {
+                          Navigator.pushNamed(
+                              context, RouterGenerator.loginRoute);
+                        }
                       },
                       label: "Register",
                       buttonType: ButtonType.PRIMARY,
                       width: size.width,
-                      horizontalPadding: 10,
                     ),
                     const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
-                    OrDivider(),
+                    const OrDivider(),
                     const SizedBox(height: BUTTON_SEPARATION_SPACE),
                     const SocialNetworkItem(),
-                    const SizedBox(height: BUTTON_SEPARATION_SPACE),
                   ],
                 ),
               ),
@@ -206,7 +205,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   text: 'Already have an account? ',
                   style: Theme.of(context).textTheme.labelMedium!.copyWith(
                       fontSize: 15,
-                      color: Color(0xFF24282C),
+                      color: const Color(0xFF24282C),
                       fontWeight: FontWeight.w500),
                   children: <TextSpan>[
                     TextSpan(

@@ -15,11 +15,11 @@ class SocialNetworkItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             SocalIcon(
-              iconSrc: "res/images/google_ic.svg",
+              iconSrc: "res/images/facebook_ic.svg",
               press: () {},
             ),
             SocalIcon(
-              iconSrc: "res/images/facebook_ic.svg",
+              iconSrc: "res/images/google_ic.svg",
               press: () {},
             ),
             SocalIcon(

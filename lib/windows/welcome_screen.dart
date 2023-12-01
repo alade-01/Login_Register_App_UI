@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../components/shared/app_button.dart';
-import '../core/router_generator.dart';
 import '../core/constants.dart';
+import '../core/router_generator.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -49,24 +49,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 label: "Login",
                 buttonType: ButtonType.PRIMARY,
                 width: size.width * 0.9,
-                //horizontalPadding: 12.0
               ),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
               AppButton(
                 callback: () =>
                     Navigator.pushNamed(context, RouterGenerator.registerRoute),
                 label: "Register",
-                color: Color(0xFF1E232C),
+                color: secondaryColor,
                 solid: false,
                 buttonType: ButtonType.SECONDARY,
                 width: size.width * 0.9,
-                // horizontalPadding: 5.0
               ),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 5.5),
               InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, RouterGenerator.registerRoute);
-                },
+                onTap: () =>
+                    Navigator.pushNamed(context, RouterGenerator.registerRoute),
                 child: Padding(
                   padding: const EdgeInsets.all(0),
                   child: Text(

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../components/shared/app_button.dart';
-import '../core/router_generator.dart';
 import '../core/constants.dart';
+import '../core/router_generator.dart';
 
 class PasswordChangedScreen extends StatefulWidget {
   const PasswordChangedScreen({super.key});
@@ -43,7 +43,7 @@ class _PasswordChangedScreenState extends State<PasswordChangedScreen> {
               Text(
                 "Your password has been changed successfully.",
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: Color(0xFF8391A1),
+                    color: swatchColorItem,
                     fontSize: 16,
                     fontWeight: FontWeight.w500),
                 textAlign: TextAlign.center,
@@ -57,7 +57,6 @@ class _PasswordChangedScreenState extends State<PasswordChangedScreen> {
                 width: size.width * 0.9,
                 //horizontalPadding: 12.0
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 3.5),
             ],
           ),
         ),

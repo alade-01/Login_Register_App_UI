@@ -74,9 +74,9 @@ class ThemeCubit extends Cubit<ThemeData> {
       //   fontSize: 16,
       // ),
 
-      iconColor: Color(0xFF8391A1),
-      prefixIconColor: Color(0xFF8391A1),
-      suffixIconColor: Color(0xFF8391A1),
+      iconColor: swatchColorItem,
+      prefixIconColor: swatchColorItem,
+      suffixIconColor: swatchColorItem,
       contentPadding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
@@ -93,7 +93,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       hintStyle: TextStyle(
         fontSize: 15,
         fontWeight: FontWeight.w500,
-        color: Color(0xFF8391A1),
+        color: swatchColorItem,
       ),
       errorStyle: const TextStyle(
           fontSize: 12, fontFamily: PRIMARY_FONT, color: Colors.redAccent),

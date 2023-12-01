@@ -7,13 +7,13 @@ import '../../../core/constants.dart';
 class AppButton extends StatelessWidget {
   final Function? callback;
   final String label;
-  ButtonType? buttonType;
-  double? width;
-  bool loading;
-  bool solid;
-  bool showBorder;
-  double horizontalPadding;
-  Color? color;
+  final ButtonType? buttonType;
+  final double? width;
+  final bool loading;
+  final bool solid;
+  final bool showBorder;
+  final double horizontalPadding;
+  final Color? color;
 
   AppButton({
     super.key,
@@ -25,7 +25,7 @@ class AppButton extends StatelessWidget {
     this.solid = true,
     this.horizontalPadding = 0,
     this.showBorder = true,
-    this.color = Colors.white
+    this.color = Colors.white,
   });
 
   @override
@@ -38,7 +38,7 @@ class AppButton extends StatelessWidget {
           .copyWith(bottom: 0),
       margin: const EdgeInsets.symmetric(horizontal: 0),
       width: width,
-      height: min(width / 1,60),
+      height: min(width / 1, 60),
       child: loading
           ? Center(
               child: CircularProgressIndicator(
@@ -78,9 +78,7 @@ class AppButton extends StatelessWidget {
               child: Text(
                 label,
                 style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    fontSize: 15,
-                    color: color,
-                    fontWeight: FontWeight.w600),
+                    fontSize: 15, color: color, fontWeight: FontWeight.w600),
               ),
             ),
     );
@@ -97,7 +95,7 @@ class AppButton extends StatelessWidget {
               side: MaterialStatePropertyAll(
                 BorderSide(
                   color: callback == null ? Colors.grey.shade500 : color0[900]!,
-                  width: 1.5,
+                  width: 1,
                 ),
               ),
             );
@@ -111,7 +109,7 @@ class AppButton extends StatelessWidget {
               side: MaterialStatePropertyAll(
                 BorderSide(
                   color: callback == null ? Colors.grey.shade500 : color1[900]!,
-                  width: 1.5,
+                  width: 1,
                 ),
               ),
             );
