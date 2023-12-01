@@ -16,9 +16,9 @@ class SocalIcon extends StatelessWidget {
     return GestureDetector(
       onTap: press as void Function()?,
       child: Container(
-        margin: const EdgeInsets.only(left: 10),
+        margin: const EdgeInsets.only(left: 0),
         padding:
-            const EdgeInsets.only(top: 20, bottom: 20, left: 45, right: 45),
+            const EdgeInsets.only(top: 15, bottom: 15, left: 42, right: 42),
         decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(width: 1,color: Color(0xFFE8ECF4)),

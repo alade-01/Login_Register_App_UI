@@ -98,7 +98,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       errorStyle: const TextStyle(
           fontSize: 12, fontFamily: PRIMARY_FONT, color: Colors.redAccent),
       enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(width: 0, color: Colors.white),
+          borderSide: const BorderSide(width: 01, color: Color(0xFFF7F8F9)),
           borderRadius: BorderRadius.circular(10)),
       focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(width: 0.7, color: primaryColor),

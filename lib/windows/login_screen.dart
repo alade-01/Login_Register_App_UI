@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../components/shared/app_button.dart';
 import '../../core/router_generator.dart';
@@ -29,16 +30,17 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
-      child: Center(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Align(
-              alignment: Alignment.center,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+                child: SingleChildScrollView(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 7),
                   Text(
                     "Welcome back! Glad to see you, Again!",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -126,9 +128,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                       .textTheme
                                       .labelMedium!
                                       .copyWith(
-                                      fontSize: 14,
-                                      color: Color(0xFF6A707C),
-                                      fontWeight: FontWeight.w600),
+                                          fontSize: 14,
+                                          color: Color(0xFF6A707C),
+                                          fontWeight: FontWeight.w600),
                                 ),
                               ),
                             ),
@@ -137,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 1.8),
+                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
                   AppButton(
                     callback: () {
                       if (formKey.currentState!.validate()) {}
@@ -152,34 +154,27 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: BUTTON_SEPARATION_SPACE),
                   const SocialNetworkItem(),
                   const SizedBox(height: BUTTON_SEPARATION_SPACE),
-                  RichText(
-                    text: TextSpan(
-                      text: 'Don’t have an account? ',
-                      style:  Theme.of(context)
-                          .textTheme
-                          .labelMedium!
-                          .copyWith(
+                ],
+              ),
+            )),
+            RichText(
+              text: TextSpan(
+                text: 'Don’t have an account? ',
+                style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                    fontSize: 15,
+                    color: Color(0xFF24282C),
+                    fontWeight: FontWeight.w500),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: 'Register Now',
+                      style: Theme.of(context).textTheme.labelMedium!.copyWith(
                           fontSize: 15,
-                          color: Color(0xFF24282C),
-                          fontWeight: FontWeight.w500),
-                      children: <TextSpan>[
-                        TextSpan(
-                            text: 'Register Now',
-                            style:  Theme.of(context)
-                                .textTheme
-                                .labelMedium!
-                                .copyWith(
-                                fontSize: 15,
-                                color: primaryColor,
-                                fontWeight: FontWeight.w700)
-                        )
-                      ],
-                    ),
-                  )
+                          color: primaryColor,
+                          fontWeight: FontWeight.w700))
                 ],
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

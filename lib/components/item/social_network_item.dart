@@ -12,7 +12,7 @@ class SocialNetworkItem extends StatelessWidget {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             SocalIcon(
               iconSrc: "res/images/google_ic.svg",

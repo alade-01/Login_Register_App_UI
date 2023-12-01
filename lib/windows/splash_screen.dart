@@ -75,18 +75,24 @@ class _SplashScreenState extends State<SplashScreen>
                         fontWeight: FontWeight.w400),
                     children: <TextSpan>[
                       TextSpan(
-                          text: 'Fruzz',
-                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                            color: Colors.black,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600),
+                        text: 'Fruzz',
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium!
+                            .copyWith(
+                                color: Colors.black,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600),
                       ),
                       TextSpan(
-                          text: 'digital',
-                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                            color: Colors.black,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400),
+                        text: 'digital',
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium!
+                            .copyWith(
+                                color: Colors.black,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400),
                       )
                     ],
                   ),
