@@ -66,12 +66,30 @@ class _SplashScreenState extends State<SplashScreen>
             left: 0,
             child: Column(
               children: [
-                Text(
-                  "Welcome to GoodJob",
-                  style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600),
+                RichText(
+                  text: TextSpan(
+                    text: 'Welcome to ',
+                    style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: 'Fruzz',
+                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      TextSpan(
+                          text: 'digital',
+                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
