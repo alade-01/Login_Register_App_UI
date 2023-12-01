@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../components/shared/app_button.dart';
 import '../../core/router_generator.dart';
@@ -40,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 7),
+                  const SizedBox(height: BUTTON_SEPARATION_SPACE * 3),
                   Text(
                     "Welcome back! Glad to see you, Again!",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -157,21 +156,24 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             )),
-            RichText(
-              text: TextSpan(
-                text: 'Don’t have an account? ',
-                style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    fontSize: 15,
-                    color: Color(0xFF24282C),
-                    fontWeight: FontWeight.w500),
-                children: <TextSpan>[
-                  TextSpan(
-                      text: 'Register Now',
-                      style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                          fontSize: 15,
-                          color: primaryColor,
-                          fontWeight: FontWeight.w700))
-                ],
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, RouterGenerator.registerRoute),
+              child: RichText(
+                text: TextSpan(
+                  text: 'Don’t have an account? ',
+                  style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                      fontSize: 15,
+                      color: Color(0xFF24282C),
+                      fontWeight: FontWeight.w500),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'Register Now',
+                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                            fontSize: 15,
+                            color: primaryColor,
+                            fontWeight: FontWeight.w700))
+                  ],
+                ),
               ),
             ),
           ],

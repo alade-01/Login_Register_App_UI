@@ -23,7 +23,7 @@ class Background extends StatelessWidget {
           alignment: Alignment.center,
           children: <Widget>[
             Positioned(
-              top: 85,
+              top: 60,
               left: 20,
               child: GestureDetector(
                 onTap: (){
