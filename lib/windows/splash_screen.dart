@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:login_register_app_ui_kit/components/shared/background.dart';
 import 'package:login_register_app_ui_kit/core/constants.dart';
 
 import '../core/router_generator.dart';
@@ -29,8 +28,8 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Background(
-      child: Stack(
+    return Scaffold(
+      body: Stack(
         children: [
           Positioned(
             left: 120,

@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/shared/app_button.dart';
+import '../../core/constants.dart';
 import '../../core/router_generator.dart';
 import '../../core/utilis.dart';
-import '../../core/constants.dart';
 import '../components/item/social_network_item.dart';
 import '../components/shared/background.dart';
 import '../components/shared/or_divider.dart';
@@ -32,8 +32,6 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          //mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
                 child: SingleChildScrollView(
@@ -53,10 +51,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(top: 10),
+                          margin: const EdgeInsets.only(top: 0),
                           child: TextFormField(
                             controller: _emailController,
-                            // style: textStyleInput,
+                            style: textStyleInput,
                             validator: (String? value) {
                               if (value != null && value.isEmpty) {
                                 return "This field is required";
@@ -114,10 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             InkWell(
-                              onTap: () {
-                                Navigator.pushNamed(context,
-                                    RouterGenerator.forgotPasswordRoute);
-                              },
+                              onTap: () => Navigator.pushNamed(
+                                  context, RouterGenerator.forgotPasswordRoute),
                               child: Padding(
                                 padding: const EdgeInsets.all(5),
                                 child: Text(
@@ -128,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       .labelMedium!
                                       .copyWith(
                                           fontSize: 14,
-                                          color: Color(0xFF6A707C),
+                                          color: const Color(0xFF6A707C),
                                           fontWeight: FontWeight.w600),
                                 ),
                               ),
@@ -146,32 +142,34 @@ class _LoginScreenState extends State<LoginScreen> {
                     label: "Login",
                     buttonType: ButtonType.PRIMARY,
                     width: size.width,
-                    horizontalPadding: 10,
                   ),
                   const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
-                  OrDivider(),
+                  const OrDivider(),
                   const SizedBox(height: BUTTON_SEPARATION_SPACE),
                   const SocialNetworkItem(),
-                  const SizedBox(height: BUTTON_SEPARATION_SPACE),
                 ],
               ),
             )),
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, RouterGenerator.registerRoute),
+              onTap: () =>
+                  Navigator.pushNamed(context, RouterGenerator.registerRoute),
               child: RichText(
                 text: TextSpan(
                   text: 'Don’t have an account? ',
                   style: Theme.of(context).textTheme.labelMedium!.copyWith(
                       fontSize: 15,
-                      color: Color(0xFF24282C),
+                      color: const Color(0xFF24282C),
                       fontWeight: FontWeight.w500),
                   children: <TextSpan>[
                     TextSpan(
                         text: 'Register Now',
-                        style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                            fontSize: 15,
-                            color: primaryColor,
-                            fontWeight: FontWeight.w700))
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium!
+                            .copyWith(
+                                fontSize: 15,
+                                color: primaryColor,
+                                fontWeight: FontWeight.w700))
                   ],
                 ),
               ),

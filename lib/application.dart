@@ -33,7 +33,7 @@ class ApplicationWithTheme extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, ThemeData>(
         builder: (context, theme) {
           return MaterialApp(
-            title: "GoodJob",
+            title: "FruzzDigital",
             theme: theme,
             debugShowCheckedModeBanner: false,
             initialRoute: RouterGenerator.splashRoute,

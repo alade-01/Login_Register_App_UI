@@ -60,8 +60,23 @@ Map<int, Color> color1 = {
   900: const Color.fromRGBO(30, 35, 44, 1.0),
 };
 
+// 0xFF8391A1 #8391A1
+Map<int, Color> swatchColor = {
+  50: const Color.fromRGBO(131, 145, 161, .1),
+  100: const Color.fromRGBO(131, 145, 161, .2),
+  200: const Color.fromRGBO(131, 145, 161, .3),
+  300: const Color.fromRGBO(131, 145, 161, .4),
+  400: const Color.fromRGBO(131, 145, 161, .5),
+  500: const Color.fromRGBO(131, 145, 161, .6),
+  600: const Color.fromRGBO(131, 145, 161, .7),
+  700: const Color.fromRGBO(131, 145, 161, .8),
+  800: const Color.fromRGBO(131, 145, 161, .9),
+  900: const Color.fromRGBO(131, 145, 161, 1.0),
+};
+
 MaterialColor primaryColor = MaterialColor(0xFF35C2C1, color0);
 MaterialColor secondaryColor = MaterialColor(0xFF1E232C, color1);
+MaterialColor swatchColorItem = MaterialColor(0xFF8391A1, swatchColor);
 
 const String Box_profile = 'profile';
 const List<String> imagesExtensions = ["png", "jpeg", "gif", "jpg", "tiff"];

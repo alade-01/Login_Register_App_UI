@@ -24,18 +24,17 @@ class Background extends StatelessWidget {
           children: <Widget>[
             Positioned(
               top: 60,
-              left: 20,
+              left: 19,
               child: GestureDetector(
-                onTap: (){
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.pop(context),
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    border: Border.all(width: 1,color: Color(0xFFE8ECF4)),
-                      borderRadius: BorderRadius.circular(13.0),
-                     // borderRadius : BorderRadius.circular(10)
-                    ),
+                    border:
+                        Border.all(width: 1, color: const Color(0xFFE8ECF4)),
+                    borderRadius: BorderRadius.circular(13.0),
+                    // borderRadius : BorderRadius.circular(10)
+                  ),
                   child: SvgPicture.asset(
                     topImage,
                     width: 25,

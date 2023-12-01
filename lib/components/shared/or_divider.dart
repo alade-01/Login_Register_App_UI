@@ -13,14 +13,11 @@ class OrDivider extends StatelessWidget {
       child: Row(
         children: <Widget>[
           buildDivider(),
-           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Text(
               "Or Login with",
-              style: Theme.of(context)
-                  .textTheme
-                  .labelMedium!
-                  .copyWith(
+              style: Theme.of(context).textTheme.labelMedium!.copyWith(
                   fontSize: 14,
                   color: secondaryColor,
                   fontWeight: FontWeight.w600),
