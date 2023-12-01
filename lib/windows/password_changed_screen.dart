@@ -20,17 +20,18 @@ class _PasswordChangedScreenState extends State<PasswordChangedScreen> {
       body: SizedBox(
         width: size.width,
         height: size.height,
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("res/images/welcomeImg.png"),
-              fit: BoxFit.cover,
-            ),
-          ),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
+              SvgPicture.asset(
+                "res/images/successmark.svg",
+                width: 100,
+                height: 100,
+              ),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 4),
               Text(
                 "Password Changed! ",
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -38,21 +39,16 @@ class _PasswordChangedScreenState extends State<PasswordChangedScreen> {
                     fontSize: 26,
                     fontWeight: FontWeight.w700),
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 1.5),
               Text(
                 "Your password has been changed successfully.",
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: Color(0xFF8391A1),
                     fontSize: 16,
                     fontWeight: FontWeight.w500),
+                textAlign: TextAlign.center,
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
-              SvgPicture.asset(
-                "res/images/successmark.svg",
-                width: 141.13,
-                height: 26.03,
-              ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 3.5),
               AppButton(
                 callback: () =>
                     Navigator.pushNamed(context, RouterGenerator.loginRoute),
