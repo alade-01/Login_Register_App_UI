@@ -36,13 +36,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 width: 58,
                 height: 58,
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
               SvgPicture.asset(
                 "res/logos/logo_text.svg",
                 width: 141.13,
                 height: 26.03,
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
               AppButton(
                 callback: () =>
                     Navigator.pushNamed(context, RouterGenerator.loginRoute),
@@ -51,7 +51,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 width: size.width * 0.9,
                 //horizontalPadding: 12.0
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2),
               AppButton(
                 callback: () =>
                     Navigator.pushNamed(context, RouterGenerator.registerRoute),
@@ -62,7 +62,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 width: size.width * 0.9,
                 // horizontalPadding: 5.0
               ),
-              const SizedBox(height: BUTTON_SEPARATION_SPACE * 2.5),
+              const SizedBox(height: BUTTON_SEPARATION_SPACE * 5.5),
               InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, RouterGenerator.registerRoute);
