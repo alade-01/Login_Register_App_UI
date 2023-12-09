@@ -3,7 +3,7 @@
 Responsive eight-screen design with input controls on each screen. 
 The goal is to facilitate user authentication on applications for different uses. 
 All these screens work perfectly on Android and iOS. Download the Flutter 
-Fruzzdigital app template for free.
+Fruzzdigital app template for free. 
 
 ## Screens it contains:
 
