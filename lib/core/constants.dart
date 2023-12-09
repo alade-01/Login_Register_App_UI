@@ -24,7 +24,7 @@ const Color backgroundColors = Color.fromRGBO(219, 227, 230, 1);
 const MESSAGE_LOADING = "Chargement en cours";
 const MESSAGE_EMPTY = "Aucune donnée";
 
-const PRIMARY_FONT = "Poppins";
+const PRIMARY_FONT = "Urbanist";
 const SECONDARY_FONT = "Lato";
 const USED_FONT = PRIMARY_FONT;
 

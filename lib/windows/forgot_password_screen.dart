@@ -93,7 +93,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
             ),
           ),
-          GestureDetector(
+          InkWell(
             onTap: () =>
                 Navigator.pushNamed(context, RouterGenerator.loginRoute),
             child: RichText(

@@ -56,7 +56,6 @@ class _OtpsScreenState extends State<OtpsScreen> {
                         ...List.generate(
                           4,
                           (index) => SizedBox(
-                            height: 64,
                             width: 75,
                             child: TextFormField(
                               validator: (String? value) {
@@ -72,13 +71,6 @@ class _OtpsScreenState extends State<OtpsScreen> {
                               },
                               // onSaved: (pin1){},
                               decoration: const InputDecoration(hintText: "0"),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelMedium!
-                                  .copyWith(
-                                      color: secondaryColor,
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w700),
                               keyboardType: TextInputType.number,
                               textAlign: TextAlign.center,
                               inputFormatters: [
@@ -107,7 +99,7 @@ class _OtpsScreenState extends State<OtpsScreen> {
               ),
             ),
           ),
-          GestureDetector(
+          InkWell(
             onTap: () {},
             child: RichText(
               text: TextSpan(
