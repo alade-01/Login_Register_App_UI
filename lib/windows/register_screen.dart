@@ -80,7 +80,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                           ),
                           Container(
-                            margin: const EdgeInsets.only(top: 0),
                             child: TextFormField(
                               controller: _emailController,
                               style: textStyleInput,
@@ -197,7 +196,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () =>
                   Navigator.pushNamed(context, RouterGenerator.loginRoute),
               child: RichText(

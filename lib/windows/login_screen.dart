@@ -51,7 +51,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(top: 0),
                           child: TextFormField(
                             controller: _emailController,
                             style: textStyleInput,
@@ -150,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             )),
-            GestureDetector(
+            InkWell(
               onTap: () =>
                   Navigator.pushNamed(context, RouterGenerator.registerRoute),
               child: RichText(

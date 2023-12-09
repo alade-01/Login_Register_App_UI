@@ -74,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen>
                         fontWeight: FontWeight.w400),
                     children: <TextSpan>[
                       TextSpan(
-                        text: 'Fruzz',
+                        text: 'Fruzz ',
                         style: Theme.of(context)
                             .textTheme
                             .labelMedium!

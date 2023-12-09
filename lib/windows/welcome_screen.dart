@@ -64,18 +64,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               InkWell(
                 onTap: () =>
                     Navigator.pushNamed(context, RouterGenerator.registerRoute),
-                child: Padding(
-                  padding: const EdgeInsets.all(0),
-                  child: Text(
-                    "Continue as a guest",
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                        fontSize: 15,
-                        color: primaryColor,
-                        fontWeight: FontWeight.w700,
-                        decoration: TextDecoration.underline,
-                        decorationColor: primaryColor),
-                  ),
+                child: Text(
+                  "Continue as a guest",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                      fontSize: 15,
+                      color: primaryColor,
+                      fontWeight: FontWeight.w700,
+                      decoration: TextDecoration.underline,
+                      decorationColor: primaryColor),
                 ),
               ),
               const SizedBox(height: BUTTON_SEPARATION_SPACE * 3.5),
